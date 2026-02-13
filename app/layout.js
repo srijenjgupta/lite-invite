@@ -12,16 +12,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "LiteInvite",
-  description: "Create free digital invitations",
+  title: "LiteInvite | Create Digital Invites in Seconds",
+  description: "The fastest way to create and share beautiful, mobile-friendly event invitations. No signup required.",
+  openGraph: {
+    title: "LiteInvite | Professional Event Invites",
+    description: "Create your event, upload a photo, and get a shareable link instantly.",
+    url: "https://lite-invite.vercel.app",
+    siteName: "LiteInvite",
+    images: [
+      {
+        url: "https://lite-invite.vercel.app/og-main.png", // Replace with an actual image in your public folder later
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LiteInvite",
+    description: "Beautiful digital invitations made easy.",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
