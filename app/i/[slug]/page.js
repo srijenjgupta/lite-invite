@@ -2,6 +2,24 @@ import { supabase } from '../../../lib/supabase';
 import { Calendar, MapPin } from 'lucide-react';
 import RSVPForm from './rsvp-form';
 
+// --- FOR DYNAMIC PREVIEWS ---
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const { data: event } = await supabase.from('events').select('title', 'hosts', 'photo_url').eq('slug', slug).single();
+
+  if (!event) return { title: "Event Not Found" };
+
+  return {
+    title: `${event.title} | LiteInvite`,
+    description: `You are invited by ${event.hosts}! Click to view details and RSVP.`,
+    openGraph: {
+      title: event.title,
+      description: `Hosted by ${event.hosts} - Click to see location and RSVP.`,
+      images: event.photo_url ? [event.photo_url] : [],
+    },
+  };
+}
+
 export default async function InvitePage({ params }) {
   const { slug } = await params;
   
