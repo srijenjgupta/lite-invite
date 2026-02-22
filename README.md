@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 LiteInvite: Zero-Friction Event Management
 
-## Getting Started
+**LiteInvite** is a high-speed, mobile-first invitation tool built to solve "Platform Fatigue." Unlike traditional event platforms that require mandatory sign-ups, LiteInvite allows hosts to create and share elegant digital invitations in seconds with zero onboarding friction for guests.
 
-First, run the development server:
+## 🎯 The Problem
+Traditional digital invitation tools often suffer from high guest drop-off rates because they force users to download apps or create accounts. **LiteInvite** prioritizes **Time-to-Value**, focusing on a lean user journey that moves from "Idea" to "Shared Link" in under 60 seconds.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 The Product Flow
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 1️⃣ Create
+Hosts fill out a single-page form with event details and a cover photo. The UI is designed to be clean and intuitive.
+![Create Invitation](./L1.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 2️⃣ Generate
+The system instantly creates a unique, slug-based URL and a "magic link" for the host.
+![Invite Ready](./L2.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3️⃣ RSVP
+Guests confirm attendance via a one-click interface. No login required, maximizing the response rate.
+![Guest View](./L3.png)
 
-## Learn More
+### 4️⃣ Track
+Hosts monitor live responses via a private, real-time dashboard.
+![Guest List](./L4.png)
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Key Features
+* **Zero-Login Architecture:** No signup required for hosts or guests, maximizing conversion.
+* **Dynamic Social Previews:** Automated OpenGraph meta-tags ensure invites look professional when shared on WhatsApp.
+* **Real-time Tracking:** Powered by PostgreSQL Realtime—see RSVPs as they happen without page refreshes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ The Tech Stack (PM Perspective)
+* **Frontend:** Next.js (React) & Tailwind CSS.
+* **Backend:** Supabase (PostgreSQL) for real-time data sync.
+* **Deployment:** Vercel for automated CI/CD.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚖️ License
+Distributed under the MIT License. See `LICENSE` for more information.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Created by Srijen Gupta
